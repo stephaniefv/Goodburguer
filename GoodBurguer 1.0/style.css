@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+:root{
+    --primeira-cor: #E6A800;
+    --segunda-cor:#fff;
+    --terceira-cor:#696969;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--segunda-cor);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+
+    max-height: 200px;
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: -30px;
+}
+
+.cabeçalho-link a{
+    color: var(--terceira-cor);
+    font-size: 23px;
+    
+}
+.cabeçalho-link a:hover{
+    color: var(--primeira-cor);
+    transition: 0.3s all;
+    
+}
+
+#logo{
+    scale: 35%;
+}
+
+button{
+    color: var(--primeira-cor);
+    font-size: 25px;
+    background: transparent;
+    border: solid 1px;
+    border-radius: 30px;
+    width: 150px;
+    margin-top: -5px;
+}
+button:hover{
+    color: var(--segunda-cor);
+    background-color: var(--primeira-cor);
+    transition: 0.5s;
+}
+
+.container-text{
+    padding: 150px 0 0 250px;
+}
+.text h3{
+    color: black;
+    font-size: 50px;
+}
+.text h1{
+    color: black;
+    font-size: 65px;
+}
+.text span{
+    color: var(--primeira-cor);
+}
+
+
