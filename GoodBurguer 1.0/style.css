@@ -252,6 +252,59 @@ button:hover{
 }
 /*FIM SOBRE*/
 
+/* Social Media */
+#social_media {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+    
+}
+
+.fb {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    
+
+}
+.google {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    position:relative;
+}
+.git{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    position:relative;
+}
+
+#social_media img:hover {
+    transform: scale(1.2);
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 32px;
+    border-top: 0.4px solid #fff2e7;
+    background-color: #E6A800;
+    position: relative;
+    
+}
+
+.txt-rodape{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
 
 ::-webkit-scrollbar{
     width: 13px;
