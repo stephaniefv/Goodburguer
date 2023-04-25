@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Good Burguer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/6.png" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -14,10 +16,10 @@
         </div> <!--logo-->
         <div class="cabeçalho-link">
             <li>
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
             </li>
             <li>
-                <a href="#">Cardápio</a>
+                <a href="#cardapio">Cardápio</a>
             </li>
             <li>
                 <a href="#">Sobre</a>
@@ -26,15 +28,47 @@
             </div><!--cabeçalho-->
     </header>
 
-    <section id="home">
-        
-        <div class="container-text">
-            <div class="text">
-                <h3>Bem vindo ao <span>GOOD BURGUER</span> </h3>
-                <h1>Restaurante de Hamburguer Gourmet</h1>
-                <h1><span>Posso anotar o seu pedido?</span></h1>
+    <section id="home">        
+        <div class="container">
+            <div class="container-text">
+                <div class="text">
+                    <h3>Bem vindo ao <span>GOOD BURGUER</span> </h3>
+                    <h2>Restaurante de Hamburguer Gourmet</h2>
+                    <h1><span>Posso anotar o seu pedido?</span></h1>
+                    <a href="#" class="btn btn-container"><i class='bx bxl-whatsapp'></i>Peça agora</a>
+                </div>
+            </div>
+            <div class="container-image">
+                <img src="img/main_img.png" alt="">
             </div>
         </div>
+    </section>
+    
+    <section id="cardapio">
+        <div class="menu" id="menu">
+            <h1>Cardápio</h1>
+
+            <div class="menu_card">
+                <div class="menu_box">
+                    <div class="menu_image">
+                        <img src="img/fotos/unsplash1.png">
+                    </div>
+                    
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Sandwich</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                        </p>
+                        <h3>$20.00</h3>
+
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+
+                </div> 
     </section>
         
 
