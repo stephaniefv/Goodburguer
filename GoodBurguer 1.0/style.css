@@ -2,7 +2,7 @@
 :root{
     --primeira-cor: #E6A800;
     --segunda-cor:#fff;
-    --terceira-cor:#696969;
+    --terceira-cor:#151515;
 }
 *{
     margin: 0;
@@ -39,7 +39,7 @@ header{
     max-height: 120px;
     position: fixed;
     background-color: var(--segunda-cor);
-    z-index: 20;
+    z-index: 10;
 }
 
 .cabeçalho-link{
@@ -47,7 +47,7 @@ header{
     gap: 3rem;
     font-weight: 400;
     cursor: pointer;
-    padding-left: 700px;
+    padding-left: 500px;
     
 }
 
@@ -182,142 +182,73 @@ button:hover{
 
 /*FIM HOME*/
 
-.menu{
-    width: 100%;
-    padding: 70px 0;
+/*CARDÁPIO*/
+.cardapio{
+    background-color: #E6A800;
+    max-height: 100vh;
 }
-
-.menu h1{
-    font-size: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+.cardapio-container{
+    height: 100vh;
 }
-
-.menu h1 span{
-    color: #fac031;
-    margin-left: 15px;
-    font-family: mv boli;
-}
-
-.menu h1 span::after{
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #fac031;
-    display: block;
-    position: relative;
-    bottom: 15px;
-}
-
-.menu .menu_box{
-    width: 95%;
-    margin: 0 auto;
+.row{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+    gap: 1rem;    
 }
-
-.menu .menu_box .menu_card{
-    width: 325px;
-    height: 480px;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.col{
+    background-color: var(--terceira-cor);
 }
-
-.menu .menu_box .menu_card .menu_image{
-    width: 300px;
-    height: 245px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.menu .menu_box .menu_card .menu_image img{
-    width: 50PX;
-    height: 50PX;
+.img-cardapio{
+    width: 100%;
+    height: 23rem; 
+    border-bottom-left-radius: 4rem;
+    background: #eee;}
+.img-cardapio img{
+    width: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: 0.3s;
+    padding: 5rem;
+}
+.content{
+    background: var(--terceira-cor);
+    color: var(--segunda-cor);
+    padding: 2rem;
+    
 }
 
-.menu .menu_box .menu_card .menu_image:hover img{
-    transform: scale(1.1);
-}
 
-.menu .menu_box .menu_card .small_card{
-    width: 45px;
-    height: 45px;
-    float: right;
-    position: relative;
-    top: -240px;
-    right: -8px;
-    opacity: 0;
-    border-radius: 7px;
-    transition: 0.3s;
-}
+/*FIM CARDÁPIO*/
 
-.menu .menu_box .menu_card:hover .small_card{
-    position: relative;
-    top: -240px;
-    right: 20px;
-    opacity: 1;
-}
 
-.menu .menu_box .menu_card .small_card i{
-    font-size: 25px;
+/*SOBRE*/
+.sobre{
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    line-height: 50px;
-    color: #000;
-    cursor: pointer;
-    text-shadow: 0 0 6px #000;
-    transition: 0.2s;
+    justify-content: space-around;
+    background-color:  var(--terceira-cor);
 }
-
-.menu .menu_box .menu_card .small_card i:hover{
-    color: #fac031;
+#img-sobre{
+    width: 500px;
+    max-height: 80vh;
+    position: relative;
+    top: 60px;
+    border-radius: 25px 25px 0 0;
+    margin: 50px;
+    
 }
-
-.menu .menu_box .menu_card .menu_info h2{
-    width: 60%;
-    text-align: center;
-    margin: 10px auto 10px auto;
-    font-size: 25px;
-    color: #fac031;
+.txt-sobre h1{
+    color: var(--segunda-cor);
+    font-size: 6rem;
+    padding-bottom: 50px;
+    
 }
-
-.menu .menu_box .menu_card .menu_info p{
-    text-align: center;
-    margin-top: 8px;
-    line-height: 21px;
+.txt-sobre p{
+    color: var(--segunda-cor);
+    font-size: 3rem;
+    
 }
-
-.menu .menu_box .menu_card .menu_info h3{
-    text-align: center;
-    margin-top: 10px;
-}
-
-.menu .menu_box .menu_card .menu_info .menu_icon{
-    color: #fac031;
-    text-align: center;
-    margin: 10px 0 10px 0;
-}
-
-.menu .menu_box .menu_card .menu_info .menu_btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    background: #000;
-    padding: 8px 10px;
-    margin: 0 80px;
-    transition: 0.3s;
-}
-
+/*FIM SOBRE*/
 
 
 ::-webkit-scrollbar{
