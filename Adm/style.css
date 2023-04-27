@@ -24,7 +24,7 @@ body{
     height: 100vh;}
 
 header{
-    margin: 50px;
+    margin: 20px;
     display: flex;
     justify-content: space-around;
     max-width: 100%;
@@ -35,14 +35,14 @@ header{
 
 .cabeçalho-link{
     display: flex;
-    gap: 8rem;
+    gap: 3rem;
     font-weight: 400;
     cursor: pointer;
 }
 
 .cabeçalho-link a{
     color: var(--terceira-cor);
-    font-size: 50px;
+    font-size: 30px;
     
 }
 .cabeçalho-link a:hover{
