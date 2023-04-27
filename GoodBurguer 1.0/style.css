@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
-:root{
+
+:root {
     --primeira-cor: #E6A800;
-    --segunda-cor:#fff;
-    --terceira-cor:#151515;
+    --segunda-cor: #fff;
+    --terceira-cor: #151515;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,22 +16,34 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-html{
-    scroll-behavior: smooth; 
+html {
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     width: 100%;
     background-color: var(--segunda-cor);
 }
 
-section{
+.one1 {
+    width: 100%;
+    height: 5px;
+    background: white;
+}
+
+.one {
+    width: 100%;
+    height: 3px;
+    background: #000000;
+}
+
+section {
     width: 100%;
     height: 100vh;
 }
 
-    /*INICIO CABEÇALHO*/
-header{
+/*INICIO CABEÇALHO*/
+header {
     max-width: 100;
     display: flex;
     justify-content: space-around;
@@ -42,31 +56,61 @@ header{
     z-index: 10;
 }
 
-.cabeçalho-link{
+.navbar li a {
+    position: relative;
+}
+
+.navbar li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+
+.navbar li:hover a {
+    color: #E6A800;
+}
+
+.navbar li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.cabeçalho-link {
     display: flex;
     gap: 3rem;
     font-weight: 400;
     cursor: pointer;
     padding-left: 500px;
-    
+
 }
 
-.cabeçalho-link a{
+.cabeçalho-link a {
     color: var(--terceira-cor);
     font-size: 23px;
-    
+
 }
-.cabeçalho-link a:hover{
+
+.cabeçalho-link a:hover {
     color: var(--primeira-cor);
     transition: 0.3s all;
-    
+
 }
 
-#logo{
+#logo {
     scale: 20%;
+    padding-top: 50px;
 }
 
-button{
+button {
     color: var(--primeira-cor);
     font-size: 25px;
     background: transparent;
@@ -75,15 +119,19 @@ button{
     width: 150px;
     margin-top: -5px;
 }
-button:hover{
+
+button:hover {
     color: var(--segunda-cor);
     background-color: var(--primeira-cor);
     transition: 0.5s;
 }
-    /*FIM CABEÇALHO*/
 
-    /*INICIO HOME*/
-.container{
+
+
+/*FIM CABEÇALHO*/
+
+/*INICIO HOME*/
+.container {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -91,30 +139,36 @@ button:hover{
     padding-top: 120px;
 
 }
-.container-text{
+
+.container-text {
     padding: 0 0 0 40px;
 }
-.text h3{
+
+.text h3 {
     color: black;
     font-size: 70px;
 }
-.text h2{
+
+.text h2 {
     color: black;
     font-size: 50px
 }
-.text h1{
+
+.text h1 {
     color: black;
-    font-size: 60px;
+    font-size: 5px;
+
 }
-.text span{
+
+.text span {
     color: var(--primeira-cor);
 }
 
-.container-image{
+.container-image {
     scale: 85%;
 }
 
-.btn{
+.btn {
     width: 240px;
     display: flex;
     align-items: center;
@@ -134,49 +188,56 @@ button:hover{
     margin-top: 10px;
     margin-left: 85px;
 }
-.btn:hover{
-    background-color: var(--primeira-cor);  
+
+
+.btn:hover {
+    background-color: var(--primeira-cor);
     color: var(--segunda-cor);
     border: 1px solid var(--segunda-cor);
 
 }
-.btn-container{
+
+.btn-container {
     width: 280px;
     background-color: transparent;
     color: var(--terceira-cor);
-    padding: 5px 10px 5px 0;
+    padding: 5px 5px 5px 0;
     transition: all 400ms ease;
     position: relative;
-    align-items: center;   
+    align-items: center;
     color: #fff;
 
 }
-.btn-container::before{
+
+.btn-container::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 32%;
+    width: 50%;
     height: 100%;
     background-color: #E6A800;
-    border: 1px solid var(--primeira-cor);
+    border: 0px solid var(--primeira-cor);
     border-radius: 50px;
     transition: all 400ms ease-in-out;
-    
+
 }
-.btn-container i{
+
+.btn-container i {
     margin-right: 3rem;
     color: var(--segunda-cor);
     font-size: 3rem;
     z-index: 10;
-    
+
 }
-.btn-container:hover::before{
+
+.btn-container:hover::before {
     width: 100%;
     z-index: -1;
 
 }
-.btn-container:hover{
+
+.btn-container:hover {
     color: var(--segunda-cor);
     z-index: 10;
 
@@ -185,36 +246,83 @@ button:hover{
 /*FIM HOME*/
 
 /*CARDÁPIO*/
-.cardapio{
+.cardapio {
     background-color: #E6A800;
     max-height: 100vh;
+    align-items: flex-end;
+
 }
-.cardapio-container{
-    height: 100vh;
+
+.col {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 50px;
+
 }
-.row{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
-    gap: 1rem;    
+
+.flip-card-back p {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+
 }
-.col{
-    background-color: var(--terceira-cor);
+
+.flip-card-back h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 10px;
+    text-decoration: underline;
 }
-.img-cardapio{
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 310px;
+    height: 210px;
+    border: 5px;
+    border-style: solid;
+    border-color: #000000;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
     width: 100%;
-    height: 23rem; 
-    border-bottom-left-radius: 4rem;
-    background: #eee;}
-.img-cardapio img{
-    width: 100%;
-    object-fit: cover;
-    padding: 5rem;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-.content{
-    background: var(--terceira-cor);
-    color: var(--segunda-cor);
-    padding: 2rem;
-    
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
 }
 
 
@@ -222,34 +330,46 @@ button:hover{
 
 
 /*SOBRE*/
-.sobre{
+.sobre {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color:  var(--terceira-cor);
+    text-align: center;
+    background-color: var(--terceira-cor);
 }
-#img-sobre{
+
+#img-sobre {
     width: 500px;
     max-height: 80vh;
     position: relative;
-    top: 60px;
-    border-radius: 25px 25px 0 0;
+    border-style: solid;
+    border-color: #E6A800;
+    border-width: 5px;
+    border-radius: 25px 25px 25px 25px;
     margin: 50px;
-    
+
 }
-.txt-sobre h1{
+
+.txt-sobre h1 {
     color: var(--segunda-cor);
     font-size: 6rem;
-    padding-bottom: 50px;
-    
+    padding-bottom: 10px;
+    padding-top: 5px;
+    text-decoration: underline;
+    justify-content: space-around;
+
 }
-.txt-sobre p{
+
+.txt-sobre p {
     color: var(--segunda-cor);
     font-size: 3rem;
-    
+    text-align: justify;
+    padding-right: 30px;
+
+
 }
+
 /*FIM SOBRE*/
 
 /* Social Media */
@@ -257,7 +377,7 @@ button:hover{
     display: flex;
     justify-content: center;
     margin-right: 5px;
-    
+
 }
 
 .fb {
@@ -267,27 +387,29 @@ button:hover{
     position: relative;
     text-align: center;
     vertical-align: middle;
-    
+
 
 }
+
 .google {
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    position:relative;
+    position: relative;
 }
-.git{
+
+.git {
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    position:relative;
+    position: relative;
 }
 
 #social_media img:hover {
     transform: scale(1.2);
 }
 
-.rodape{
+.rodape {
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -295,10 +417,10 @@ button:hover{
     border-top: 0.4px solid #fff2e7;
     background-color: #E6A800;
     position: relative;
-    
+
 }
 
-.txt-rodape{
+.txt-rodape {
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 10px;
@@ -306,16 +428,16 @@ button:hover{
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 13px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     border-radius: 15px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: var(--primeira-cor);
     border-radius: 15px;
 }
@@ -335,54 +457,54 @@ button:hover{
     align-items: center;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
     height: 5rem;
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .navbar ul li {
+}
+
+.navbar ul li {
     margin-right: 20px;
-  }
-  
-  .navbar ul li:last-child {
+}
+
+.navbar ul li:last-child {
     margin-right: 0;
-  }
-  
-  .navbar a {
+}
+
+.navbar a {
     color: #333;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 30px;
     text-decoration: none;
-  }
-  
-  .navbar button {
+}
+
+.navbar button {
     background-color: #E6A800;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .cabeçalho-link {
+}
+
+.cabeçalho-link {
     background-color: #fff;
     color: #E6A800;
     text-align: center;
     padding: 50px 0;
     margin-top: 70px;
-  }
-  
-  .cabeçalho-link h1 {
+}
+
+.cabeçalho-link h1 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 20px;
-  }
-  
-  .cabeçalho-link h1 span {
+}
+
+.cabeçalho-link h1 span {
     font-size: 40px;
     font-weight: 700;
-  }  
+}
