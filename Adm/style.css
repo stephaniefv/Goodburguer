@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 :root{
     --primeira-cor: #E6A800;
-    --segunda-cor:#fff;
-    --terceira-cor:#696969;
+    --segunda-cor:#151515;
+    --terceira-cor:#fff;
 }
 *{
     margin: 0;
@@ -16,33 +16,32 @@
 
 body{
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/gallery2.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;}
 
 header{
+    margin: 50px;
     display: flex;
     justify-content: space-around;
     max-width: 100%;
     align-items: center;
     text-align: center;
-
     max-height: 200px;
 }
 
 .cabeçalho-link{
     display: flex;
-    gap: 3rem;
+    gap: 8rem;
     font-weight: 400;
     cursor: pointer;
-    margin-top: -30px;
 }
 
 .cabeçalho-link a{
     color: var(--terceira-cor);
-    font-size: 23px;
+    font-size: 50px;
     
 }
 .cabeçalho-link a:hover{
@@ -52,7 +51,7 @@ header{
 }
 
 #logo{
-    scale: 35%;
+    scale: 50%;
 }
 
 button{
@@ -74,12 +73,12 @@ button:hover{
     padding: 150px 0 0 250px;
 }
 .text h3{
-    color: black;
-    font-size: 50px;
+    color: var(--primeira-cor);
+    font-size: 90px;
 }
 .text h1{
-    color: black;
-    font-size: 65px;
+    color: var(--terceira-cor);
+    font-size: 120px;
 }
 .text span{
     color: var(--primeira-cor);
