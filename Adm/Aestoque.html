@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Burguer</title>
+<link rel="icon" href="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/4.png" alt="GoodBurguer" id="logo">       
+        </div> <!--logo-->
+        <div class="cabeçalho-link">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>               
+                <a href="Acadastro.html">Cadastrar Alimentos</a>
+            </li>
+            <li>               
+                <a href="Bcadastro.html">Cadastrar Bebidas</a>
+            </li>
+            <li>
+                <a href="Aestoque.html">Estoque de Alimentos</a>
+            </li>
+            <li>               
+                <a href="Bestoque.html">Estoque de Bebidas</a>
+            </li>
+            <button>Sair</button>
+
+
+
+        </div><!--cabeçalho-->
+    </header>
+
+    <div class="main">
+        <h1>Estoque de Alimentos</h1>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Valor Uni.</th>
+                    <th>Valor Total</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for (int i = 0; i < lista.size(); i++) { %>
+                    <tr>
+                        <td><%=lista.get(i).getId()%></td>
+                        <td><%=lista.get(i).getNome()%></td>
+                        <td><%=lista.get(i).getQuantidade()%></td>
+                        <td><%=lista.get(i).getValorUni()%></td>
+                        <td><%=lista.get(i).getValorTotal()%></td>
+                        <td><a href="select?id=<%=lista.get(i).getId() %>" class="Botao1">Editar</a>
+                            <a href="javascript: confirmar(<%=lista.get(i).getId() %>)" class="Botao2">Excluir</a>
+                        </td>
+                    </tr>
+                <%} %>
+        </tbody>
+        </table>
+        <a href="novoP.jsp" class="Botao3">Novo produto</a>
+
+        <script src = "scripts/confirmador.js"></script>
+    
+    </div>
+
+</body>
+</html>
