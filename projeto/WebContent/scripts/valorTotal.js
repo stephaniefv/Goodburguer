@@ -9,3 +9,12 @@ function calcularValorTotal(){
 	
 	frmProduto.valorTotal.value = valorTotal
 }
+
+function calcularValorTotalB(){
+	let quantidade = frmBebidas.quantidadeBebidas.value
+	let valorUni = frmBebidas.valorUniBebidas.value
+	
+	let valorTotal = quantidade * valorUni
+	
+	frmBebidas.valorTotalBebidas.value = valorTotal
+}
