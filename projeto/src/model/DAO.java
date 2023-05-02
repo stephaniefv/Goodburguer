@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 
 
 public class DAO {
-	/** Módulo de conexão **/
-	// Parâmetro de conexão
+	/** Mï¿½dulo de conexï¿½o **/
+	// Parï¿½metro de conexï¿½o
 	private String driver = "com.mysql.cj.jdbc.Driver";
 	private String url = "jdbc:mysql://127.0.0.1:3306/estoque?useTimezone=true&serverTimezone=UTC";
 	private String user = "root";
 	private String password = "";
 
-	// Método de conexão
+	// Mï¿½todo de conexï¿½o
 	public Connection conectar() {
 		Connection con = null;
 		try {
@@ -25,7 +25,7 @@ public class DAO {
 		}
 	}
 
-	// teste de conexão
+	// teste de conexï¿½o
 	public void testeConexao() {
 		try {
 			Connection con = conectar();
