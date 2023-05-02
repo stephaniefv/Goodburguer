@@ -6,17 +6,17 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class ProdutoDao extends DAO {
-	// CRUD creat
+	// CRUD create
 	DAO dao = new DAO();
 
 	public void inserirProduto(Javabeans produto) {
 		String create = "insert into burguer(nome, quantidade, valorUni, valorTotal) values (?,?,?,?)";
 		try {
-			// abrir conexão
+			// abrir conexï¿½o
 			Connection con = dao.conectar();
-			// Preparar a query para execução
+			// Preparar a query para execuï¿½ï¿½o
 			PreparedStatement pst = con.prepareStatement(create);
-			// substituir os parâmetros (?) pelo conteudo javabeans
+			// substituir os parï¿½metros (?) pelo conteudo javabeans
 			pst.setString(1, produto.getNome());
 			pst.setString(2, produto.getQuantidade());
 			pst.setString(3, produto.getValorUni());
